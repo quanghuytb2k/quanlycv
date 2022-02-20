@@ -1,78 +1,98 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Các bước để bắt đầu dự án:
+1. Clone Source Code:
+```bash
+git clone git clone git@github.com:codeaamirkalimi/Task-Management-System-Laravel.git
+```
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+```bash
+git checkout develope
+```
 
-## About Laravel
+2. Cài đặt các dependencies và packages cần thiết cho Laravel:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```bash
+composer install
+```
+```bash
+npm install
+```
+3. Duplicate file .env.example, đổi tên thành .env sửa thông tin DB cho phù hợp
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+4. Chạy lệnh:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```bash
+php artisan key:generate
+```
 
-## Learning Laravel
+```bash
+php artisan migrate
+```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+5. Hoàn tất, khởi chạy laravel:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```bash
+php artisan serve
+```
 
-## Laravel Sponsors
+Truy cập vào web qua http://localhost:8000
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Các bước để code và đẩy code:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+1. Tại branch develope hoặc branch gốc của phase code tương ứng, lấy code mới nhất từ repository gitlab
 
-## Contributing
+```bash
+git pull
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. Sau khi pull hoàn tất, tạo 1 branch mới với tên branch dễ nhận diện (thường là theo tên task VD: Coding#123456)
+```bash
+git checkout -b <tên branch>
+```
 
-## Code of Conduct
+3. Viết code trên branch đã tạo (dùng lệnh git checkout -b sẽ vừa tạo mới, vừa chuyển ngay sang branch mới. Nếu chuyển sang branch đã tạo chỉ cần `git checkout <tên branch>`)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Sau khi viết code xong thực hiện
 
-## Security Vulnerabilities
+```bash
+git add .
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git commit -m "<giải thích nội dung thanh đổi của commit>"
+```
 
-## License
+4. Sau khi viết và test code ok, thực hiện đẩy code lên.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git checkout develope
+```
+
+```bash
+git pull
+```
+
+Lệnh trên giúp quay về nhánh dev chính để lấy code mới nhất từ repository về
+
+5. Ghép code từ nhánh chính sang nhánh của bản thân để đồng nhất code:
+
+```bash
+git checkout <tên nhánh>
+```
+
+```bash
+git rebase develope
+```
+
+Bước này sẽ kéo toàn bộ log của nhánh develope sang nhánh đang code, commit của nhánh hiện tại sẽ ở trên cùng
+
+6. Đẩy code của nhánh hiện tại lên repository
+
+```bash
+git push origin <tên nhánh>
+```
+
+Lưu ý: Tên nhánh lúc đẩy phải trùng với tên nhánh đang code và đẩy trong lúc đang checkout ở nhánh đó
+
+- Tuyệt đối không push lên nhánh develope hay push khi đang ở nhánh develope
+
+7. Truy cập vào gitlab và thực hiện merge request nhánh vừa đẩy vào nhánh develope, chờ leader review code và merge
