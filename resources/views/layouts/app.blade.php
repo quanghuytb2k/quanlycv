@@ -18,6 +18,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('bootstrap/css/bootstrap.min.cs')}}" rel="stylesheet" type="text/css"/>
+
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
 </head>
 <body>
     <div id="app">
