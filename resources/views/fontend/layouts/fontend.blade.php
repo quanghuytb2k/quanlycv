@@ -20,12 +20,19 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}" >
 	<link rel="stylesheet" href="{{ asset('assets/css/atlantis.min.css')}}">
-	<link rel="stylesheet" href="{{ asset('assets/select2/select2.min.css')}}">
-
-	
 	<link rel="stylesheet" href="{{ asset('assets/css/demo.css')}}">
+
+    {{-- css select2 --}}
+	<link rel="stylesheet" href="{{ asset('assets/select2/bootstrap.min.css')}}" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ asset('assets/select2/select2-bootstrap4.min.css')}}">
+	<link rel="stylesheet" href="{{ asset('assets/select2/select2.min.css')}}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+	
+
 </head>
 <body>
 	<style>
@@ -85,6 +92,7 @@
 		</div>
 		<!-- End Custom template -->
 	</div>
+	
 	<!--   Core JS Files   -->
 	<script src="{{ asset('assets/js/core/jquery.3.2.1.min.js')}}"></script>
 	<script src="{{ asset('assets/js/core/popper.min.js')}}"></script>
@@ -122,7 +130,8 @@
 
 	<!-- Atlantis JS -->
 	<script src="{{ asset('assets/js/atlantis.min.js')}}"></script>
-	<script src="{!! asset('assets/select2/select2.full.min.js') !!}"></script>
+
+	{{-- select2 js --}}
 
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	{{-- <script src="{{ asset('assets/js/setting-demo.js')}}"></script>

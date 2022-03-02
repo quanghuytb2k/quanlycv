@@ -22,3 +22,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('create','TicketController@create')->name('create');
+Route::get('stores','TicketController@stores')->name('stores');
