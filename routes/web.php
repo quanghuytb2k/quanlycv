@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('create-ticket','TicketController@create')->name('create');
+Route::get('edit-ticket/{id}','TicketController@edit')->name('edit-ticket');
+Route::get('detail-ticket/{id}','TicketController@detail')->name('detail-ticket');
+Route::get('download/{id}','TicketController@download')->name('download');
+
+
+Route::post('stores','TicketController@stores')->name('stores');
+Route::get('add_jobs','TicketController@add_jobs')->name('jobs');
+Route::get('add_levels','TicketController@add_levels')->name('levels');
+Route::get('show_levels','TicketController@show_levels')->name('show-levels');
