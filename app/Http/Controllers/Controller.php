@@ -22,11 +22,11 @@ class Controller extends BaseController
         return 123;
     }
 
-    function create()
+    function c1()
     {
         $name = 1;
-        $job = 2;
-        return 123;
+        $job = 1;
+        return 111;
     }
 
     function c3(){
@@ -35,6 +35,12 @@ class Controller extends BaseController
         return 333;
     }
     function c4(){
+        $a = 4;
+        $b = 4;
+        return 444;
+    }
+
+    function testc1(){
         $a = 4;
         $b = 4;
         return 444;
