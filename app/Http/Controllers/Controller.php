@@ -19,4 +19,11 @@ class Controller extends BaseController
         $b = 2;
         return 123;
     }
+
+    function create()
+    {
+        $name = 1;
+        $job = 2;
+        return 123;
+    }
 }
