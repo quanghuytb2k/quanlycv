@@ -10,7 +10,12 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    3333333333333;
-    444444444;
-    55555555555;
+
+
+    public function create()
+    {
+        $name = 1;
+        $job = 2;
+        return 123;
+    }
 }
