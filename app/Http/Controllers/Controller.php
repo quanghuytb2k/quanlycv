@@ -13,4 +13,10 @@ class Controller extends BaseController
     3333333333333;
     444444444;
     55555555555;
+
+    function c2(){
+        $a = 2;
+        $b = 2;
+        return 123;
+    }
 }
