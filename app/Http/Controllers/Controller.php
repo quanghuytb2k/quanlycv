@@ -12,6 +12,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     1111111111111;
     3333333333333;
+    1111111111;
     444444444;
     55555555555;
 
@@ -32,5 +33,10 @@ class Controller extends BaseController
         $a = 3;
         $b = 3;
         return 333;
+    }
+    function c4(){
+        $a = 4;
+        $b = 4;
+        return 444;
     }
 }
