@@ -27,4 +27,10 @@ class HomeController extends Controller
         return view('home');
     }
 
+    function c4(){
+        $a = 4;
+        $b = 4;
+        return 444;
+    }
+
 }
