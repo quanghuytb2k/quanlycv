@@ -10,11 +10,6 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    1111111111111;
-    3333333333333;
-    1111111111;
-    444444444;
-    55555555555;
 
     function c2(){
         $a = 2;
@@ -40,9 +35,9 @@ class Controller extends BaseController
         return 444;
     }
 
-    function testc1(){
-        $a = 4;
-        $b = 4;
-        return 444;
+    function c5(){
+        $a = 5;
+        $b = 5;
+        return 5;
     }
 }
